@@ -197,14 +197,14 @@
                     //if item is in index
                     if (upS.indexOf(query)>-1) {
                         //add result html
-                        lastResults+=`<li class="resultItem" id="L${indx[i][0][0].toUpperCase()}">Recipe for: <button class="wResult" onclick='window.open("Recipe_Page.html?rName=${indx[i][0][0].replace(" ","-")}")'>${indx[i][0][0]}</button>costs $${indx[i][0][1]} per serving.<br><table><tr><th>Tags:</th>${showTags(indx[i][1])}</tr></table></li>`
+                        lastResults+=`<li class="resultItem" id="L${indx[i][0][0].toUpperCase()}">Recipe for: <button class="wResult" onclick='window.open("Ticket_Page.html?rName=${indx[i][0][0].replace(" ","-")}")'>${indx[i][0][0]}</button>costs $${indx[i][0][1]} per serving.<br><table><tr><th>Tags:</th>${showTags(indx[i][1])}</tr></table></li>`
                         //add result to list
                         lastSearchR.push(indx[i])
                     }}
                 }
                 else{//show all results
                     for (let i = 0; i < indx.length; i++) {
-                        lastResults+=`<li class="resultItem" id="L${indx[i][0][0].toUpperCase()}">Recipe for: <button class="wResult" onclick='window.open("Recipe_Page.html?rName=${indx[i][0][0].replace(" ","-")}")'>${indx[i][0][0]}</button>costs $${indx[i][0][1]} per serving.<br><table><tr><th>Tags:</th>${showTags(indx[i][1])}</tr></table></li>`
+                        lastResults+=`<li class="resultItem" id="L${indx[i][0][0].toUpperCase()}">Recipe for: <button class="wResult" onclick='window.open("Ticket_Page.html?rName=${indx[i][0][0].replace(" ","-")}")'>${indx[i][0][0]}</button>costs $${indx[i][0][1]} per serving.<br><table><tr><th>Tags:</th>${showTags(indx[i][1])}</tr></table></li>`
                         lastSearchR.push(indx[i])
                     }
 
