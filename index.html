@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!--This section creates and displays the webpage Title-->
+ <title>Recipe Planner</title>
+<meta charset="UTF-8">
+ <!--<link href="Styles.css" rel="stylesheet"> -->
+<!--Carter Pedersen,Started 06/29/2026, Laste Edited:7/25/2026 100% Hand coded. No AI Used.-->
+
+<!--This section creates and displays the main body of the page-->
+<!--main section of the page -->
+<main>
+    <!--body section of the page -->
+    <body class="main">
+        <!--header section -->
+        <div id="header">
+            <h1>Find a Recipe</h1>
+        </div>
+        <!--spacing -->
+        <br>
+        <br>
+        <!--searchbox div -->
+        <div id="qbox">
+            <!--seachbox, used to get results -->
+            <input type="text" id="query" placeholder="Search Recipes"></input>
+        </div>
+            <!--dropdown to filter results -->
+            <div class="dropdown" id="dropdown"> 
+                <button id="dropbtn" class="dropbtn">Show filters</button>
+                    <div id="tagDropdown" class="dropdown-content">
+                        <!--used to search filters -->
+                        <input type="text" placeholder="Find filter" id="tagInput" onkeyup="filterFunction()">
+                    </div>
+                    
+            </div>
+            <!-- used to display the selected filters-->
+    <div class="displaybox">
+        <h3 id =fbox> Used Filters</h3>
+            <div class="filters" id="bigFilters">        
+                <div class="fliterRbox">
+                <table><tr id="usedFilters"></tr></table><br>
+            </div>
+        </div>
+    </div>
+    <!-- displays formatted results -->
+    <div class="Results" id="Results">
+        <h1>Results</h1><br>
+        <span id="lresults" class="lresults">
+        </span>
+    </div>
+    </body>
+</main>
+<!--Style and Script Sheets-->
+<link rel="stylesheet" href="mainstyle.css">
+<script src="mainscript.js"></script>
+</html>
