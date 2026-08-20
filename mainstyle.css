@@ -1,0 +1,179 @@
+#fbox{
+    display: flex;
+    justify-content: center;
+}
+#bigFilters{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10%;
+}
+.lresults{
+    align-content: space-around;
+}
+.activeFilter{
+    background-color:#2559c9;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.activeFilter:hover{
+    background-color:#258dc9;
+}
+.drptest{
+    width: 100%;
+    background-color: #29a52f;
+    cursor: pointer;
+}
+.filters{
+    border: 2px solid black;
+    visibility: visible;
+    padding: 2%;
+    
+}
+.resultItem{
+    background-color: white;
+    border: 3px solid black;
+    width: fit-content;
+    margin: 1em;
+}
+
+.tagR{
+    background-color: lightblue;
+    border:2px solid black;
+    width: fit-content;
+}
+.wResult{
+    border: solid black;
+    font-size:16px ;
+    width:fit-content;
+    background-color: #29a52f;
+    padding: 5px;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: antiquewhite;
+}
+#Results{
+    display: flex;
+    justify-items: center;
+    
+}
+
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid green; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }}
+    /* Dropdown Button */
+#createRecipe{
+    display: flex;
+    justify-content: right;
+}
+#MakeR{
+ background-color: #29a52f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; 
+}
+
+.dropbtn {
+  background-color: #29a52f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  
+}
+#query{
+    box-sizing: border-box;
+    width: 75%;
+    height: 50px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right:auto ;
+}
+#header{
+    display: flex;
+    justify-content: center;
+}
+#qbox{
+    display:flex;
+    padding :5px;
+    align-items: center;
+    justify-content: center;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus,.MakeR:hover, .MakeR:focus,.wResult:hover {
+  background-color: #46da4b;
+}
+.drptest:focus,.drptest:hover{
+    background-color: #46da4b;
+
+}
+
+/* The search field */
+#tagInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#tagInput:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  height:fit-content;
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  color: black;
+  text-decoration: none;
+  display: block;
+  height:fit-content;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.filters{
+    display: flex;
+    align-items: center;
+    
+}
+#Results{
+    display: none;
+    visibility: hidden;
+    border: solid green;
+}
