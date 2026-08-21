@@ -1,1 +1,67 @@
-
+<!DOCTYPE html>
+<html>
+<!--This section creates and displays the webpage Title-->
+<meta charset="UTF-8"name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Carter Pedersen,Started 06/30/2026, Laste Edited:7/26/2026 100% Hand coded. No AI Used.-->
+<!--main section of the page -->
+<main id="maincontent">
+    <!--body section of the page -->
+    <body>
+        <head>
+            <!-- title and links -->
+            <title>Recipe</title>
+            <link rel="stylesheet" href="recipestyles.css">
+        </head>
+        <!-- portions to recieve dynamic generation -->
+        <div id="rName"></div>
+        <div id="image"></div>
+        <div id="info">
+            <!-- cost table -->
+            <table id="cTable">
+                <!-- prep and cook times -->
+                <tr id="prep" class="prep">
+                </tr>
+            </table>
+        </div>
+        <!-- table to show cost per serving -->
+        <table id="servv">
+            <tr>
+                <th>
+                </th>
+                <td>
+                    <!-- input box to calculate -->
+                    <input type="number" placeholder="0" id="serV" onkeyup=updateCost()  onchange=updateCost() min="0">
+                </td>
+                <td id="costPS">servings will cost $0</td> 
+            </tr>
+        
+        </table>
+        
+        </div>
+        <!-- ingredients area -->
+        <div id="ingred">
+            <div id="ibox">
+                <div id="innerbox">
+                    <ul><li><h2>Ingredients</h2></li></ul>
+                <table>
+                    <tr><th></th></tr>
+                    <!-- recieves list of ingredients, unordered -->
+                    <tr><td><ul id="iL"></ul></td></tr>
+                </table>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <!--steps area -->
+        <div id="steps">
+            <ul><li><h2>Steps</h2></li></ul>
+            <table>
+            <tr><th></th></tr>
+            <!-- for steps list, ordered-->
+            <tr><td><ol id="sL"></ol></td></tr>
+        </table>
+        </div>
+</main>
+<script src="recipescript.js"></script>
+</body>
