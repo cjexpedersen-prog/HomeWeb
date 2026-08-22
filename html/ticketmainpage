@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--This section creates and displays the webpage Title-->
+ <title>House Helpdesk</title>
+<meta charset="UTF-8">
+<link href="/css/mainstyle.css" rel="stylesheet">
+<!--Carter Pedersen,Started 08/20/2026, Laste Edited:8/22/2026 100% Hand coded. No AI Used.-->
+
+<!--This section creates and displays the main body of the page-->
+<!--main section of the page -->
+<main>
+    <!--main section of the page -->
+    <body class="mainpage">
+        <!--header section -->
+        <div id="header">
+            <h1>Browse Tickets</h1>
+            <button id="ticketlink">Submit a ticket</button>
+        </div>
+        <!--searchbox div -->
+        <div id="qbox">
+            <!--seachbox, used to get results -->
+            <input type="text" id="query" placeholder="Search Tickets"></input>
+        </div>
+    <!-- displays formatted results -->
+    <div class="ResultH" id="Results">
+        <h1>Results</h1>
+    </div>
+    <div id="ResultL">
+        <span id="lresults" class="lresults">
+        </span>
+    </div>
+    </body>
+</main>
