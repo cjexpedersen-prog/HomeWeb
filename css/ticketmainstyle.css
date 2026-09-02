@@ -22,13 +22,17 @@
     color: greenyellow;
     margin: 3vw;
     min-width: fit-content;
-    font-size: 3vw;
+    font-size: 1.5em;
 }
-#ticketlink{
+#submit{
+    display: flex;
+    justify-content: right;
+}
+#sticketlink{
     background: gray;
     cursor: pointer;
-    height:10vw;
-    width: 15vw;
+    height:5em;
+    width: 8em;
     font-weight: bold;
     min-width: fit-content;
     min-height: fit-content;
@@ -43,8 +47,35 @@
 }
 #ResultL{
     width: 100vw;
-border-top:4px solid blue;
+    border-top:4px solid blue;
 }
 h1{
  margin-top:3vw ;
+}
+.filters{
+    background-color: gray;
+}
+h1, h2{
+    color :yellowgreen
+}
+#uRlowL,#uRlow{
+    
+}
+table{
+    border:2px solid black;
+     display: flex;
+    justify-content:space-around;
+}
+tr{
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 15em;
+    height: 3em;
+}
+.ibox{
+    display: flex;
+    width: 95vw;
+    field-sizing: content;
 }
