@@ -14,13 +14,43 @@ body {
 }
 .linkButton{
     display: flex;
-    height:5em;
-    width: 25vw;
-    font-size: 1em;
     background:rgb(114, 101, 101);
     min-width: fit-content;
     border:4px solid green;
     justify-content: center;
-align-items: center;
-cursor:pointer;
+    align-items: center;
+    cursor:pointer;
+}
+.linkButton:hover{
+    background:rgb(110, 145, 112);
+}
+@media screen and (max-width:375px) {
+    .linkButton{
+        height:25vw;
+        width: 65vw;
+        font-size: 1em;
+        margin-bottom: 15vw;
+    }
+}
+@media screen and (min-width:376px) and (max-width:768px){
+    h1{
+        font-size:3em;
+    }
+    .linkButton{
+        height:20vw;
+        width: 62vw;
+        font-size: 1.5em;
+        margin-bottom: 5vw;
+    }
+}
+@media screen and (min-width:769px) {
+    .linkButton{
+        height:75px ;
+        width: 360px;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+    h1{
+        font-size:3em;
+    }
 }
