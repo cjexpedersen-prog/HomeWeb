@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<!--This section creates and displays the webpage Title-->
+ <title>Submit a ticket</title>
+<meta charset="UTF-8">
+<link href="mainstyle.css" rel="stylesheet">
+ <!--<link href="Styles.css" rel="stylesheet"> -->
+<!--Carter Pedersen,Started 08/28/2026, Laste Edited:9/2/2026 100% Hand coded. No AI Used.-->
+
+<!--This section creates and displays the main body of the page-->
+<!--main section of the page -->
+<main>
+<body class="mainpage">
+    <div class="filters">
+           <h1>Enter your Ticket Information</h1>
+            <table>
+                <tr><td><h2>Tags</h2></td></tr>
+                <tr>
+                   <td>
+                    <table>
+                        <tr><th><p>Scale</p></th></tr>
+                        <tr>
+                             
+                            <td>
+                                <input type="radio" name="sR" id="uRvsm" value="1">
+                                <label for="sRsm" id="sRvsmL">Very Small</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="sR" id="sRsm" value="2">
+                                <label for="sRsm" id="sRsmL">Small</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="sR" id = "sRmed" value="3">
+                                <label for="sRmed" id = "sRmedL">Medium</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="sR" id = "sRlarge" value="4">
+                                <label for="sRlarge" id = "sRlargeL">Large</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="sR" id = "sRvlarge" value="5">
+                                <label for="sRvlarge" id = "uRcritL">Very Large</label>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                   </td>
+                   <td>
+                        <table>
+                            <tr><th><p>Existing issue?</p></th></tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="existR" id="existRyes" value="1">
+                                    <label for="existRyes" id="existRyesL">Yes</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="existR" id="existRno" value="0">
+                                    <label for="existRno" id="existRnoL">No</label>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th><p>Urgency</p></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="uR" id="uRlow" value="1">
+                                    <label for="uRlow" id="uRlowL">Low</label>
+                                    <input type="radio" name="uR" id="uRmed" value="2">
+                                    <label for="uRmed" id="uRmedL">Medium</label>
+                                    <input type="radio" name="uR" id = "uRhi" value="3">
+                                    <label for="uRhi" id = "uRhiL">High</label>
+                                    <input type="radio" name="uR" id = "uRcrit" value="4">
+                                    <label for="uRcrit" id = "uRcritL">Critical</label>
+                                </td>
+                            </tr>
+                        </table>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>
+                                    <p>Description of issue</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea class="ibox" maxlength="512" id="ibDescr"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>
+                                    <p>Location of issue</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea class="ibox" maxlength="64" id="ibLocat"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div id="ResultL">
+            <span id="lresults" class="lresults">
+            </span>
+    </div>
+    <div>
+        <button >Submit Ticket</button>
+    </div>
+</body>
+</main>
