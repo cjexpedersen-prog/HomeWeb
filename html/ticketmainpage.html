@@ -3,8 +3,8 @@
 <!--This section creates and displays the webpage Title-->
  <title>House Helpdesk</title>
 <meta charset="UTF-8">
-<link href="/css/ticketmainstyle.css" rel="stylesheet">
-<!--Carter Pedersen,Started 08/20/2026, Laste Edited:8/22/2026 100% Hand coded. No AI Used.-->
+<link href="../css/mainstyle.css" rel="stylesheet">
+<!--Carter Pedersen,Started 08/20/2026, Laste Edited:8/28/2026 100% Hand coded. No AI Used.-->
 
 <!--This section creates and displays the main body of the page-->
 <!--main section of the page -->
@@ -14,20 +14,103 @@
         <!--header section -->
         <div id="header">
             <h1>Browse Tickets</h1>
-            <button id="ticketlink">Submit a ticket</button>
         </div>
+        
         <!--searchbox div -->
         <div id="qbox">
             <!--seachbox, used to get results -->
             <input type="text" id="query" placeholder="Search Tickets"></input>
         </div>
-    <!-- displays formatted results -->
-    <div class="ResultH" id="Results">
-        <h1>Results</h1>
-    </div>
-    <div id="ResultL">
-        <span id="lresults" class="lresults">
-        </span>
-    </div>
+        <div class="filters">
+            <h2>Filters</h2>
+            <table>
+                <tr>
+                   <td>
+                    <table>
+                        <tr><th><p>Scale</p></th></tr>
+                        <tr>
+                             
+                            <td>
+                                <input type="checkbox" name="sR" id="uRvsm" value="1">
+                                <label for="sRsm" id="sRvsmL">Very Small</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="sR" id="sRsm" value="2">
+                                <label for="sRsm" id="sRsmL">Small</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="sR" id = "sRmed" value="3">
+                                <label for="sRmed" id = "sRmedL">Medium</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="sR" id = "sRlarge" value="4">
+                                <label for="sRlarge" id = "sRlargeL">Large</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="sR" id = "sRvlarge" value="5">
+                                <label for="sRvlarge" id = "uRcritL">Very Large</label>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                   </td>
+                   <td>
+                        <table>
+                            <tr><th><p>Existing issue?</p></th></tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="uR" id="existRyes" value="1">
+                                    <label for="existRyes" id="existRyesL">Yes</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="existRno" id="existRno" value="0">
+                                    <label for="existRno" id="existRnoL">No</label>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th><p>Urgency</p></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="uR" id="uRlow" value="1">
+                                    <label for="uRlow" id="uRlowL">Low</label>
+                                    <input type="checkbox" name="uR" id="uRmed" value="2">
+                                    <label for="uRmed" id="uRmedL">Medium</label>
+                                    <input type="checkbox" name="uR" id = "uRhi" value="3">
+                                    <label for="uRhi" id = "uRhiL">High</label>
+                                    <input type="checkbox" name="uR" id = "uRcrit" value="4">
+                                    <label for="uRcrit" id = "uRcritL">Critical</label>
+                                </td>
+                            </tr>
+                        </table>
+                    <td>
+                        <table>
+                            <tr><th><p>In progress?</p></th></tr>
+                            <tr>
+                                <td><input type="checkbox" name="uR" id="inprRyes" value="1">
+                                    <label for="inprRyes" id="inprRyesL">Yes</label>
+                                    <input type="checkbox" name="inprRno" id="inprRno" value="0">
+                                    <label for="inprRno" id="inprRnoL">No</label>
+                                </td>
+                            </tr>
+                        </table>          
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- displays formatted results -->
+        <div class="ResultH" id="Results">
+            <h1>Results</h1>
+        </div>
+        <div id="ResultL">
+            <span id="lresults" class="lresults">
+            </span>
+        </div>
     </body>
 </main>
