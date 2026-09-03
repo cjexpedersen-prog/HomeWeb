@@ -13,16 +13,42 @@ let data={
         name:""
     }
 function submitdata(){
+    let urgency =1;
+    let scale =1;
+    let prior ="0"
+    if (document.getElementById("uRmed").checked){
+        urgency=2
+    }
+     else if (document.getElementById("uRhi").checked){
+        urgency=3
+    }
+    else if (document.getElementById("uRcrit").checked){
+        urgency=4
+    }
+
+    if (document.getElementById("sRmed").checked){
+        scale=2
+    }
+     else if (document.getElementById("sRlarge").checked){
+        scale=3
+    }
+    else if (document.getElementById("sRvlarge").checked){
+        scale=4
+    }
+
+    if (document.getElementById("existRyes").checked){
+        prior="1"
+    }
+
     const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
     data.submit = Date.toString();
-    data.scale= form.elements["uR"].value;
-    data.urgency= form.elements["sR"].value;
-    data.prior= form.elements["existR"].value;
+    data.scale= 0;
+    data.urgency= urgency
+    data.prior= 0;
     let xhr = new XMLHttpRequest();
     let url = "../script/sqlcatch.php"
-    
     xhr.open("POST",url, true)
     xhr.setRequestHeader("Content-Type","application/json");
     xhr.onreadystatechange = function(){
@@ -30,5 +56,6 @@ function submitdata(){
             document.getElementById("tester").innerText=this.responseText;
         }
         xhr.send(data);
+        console.log(xhr.response)
     }
 };
