@@ -14,7 +14,14 @@ function submitdata(){
         name:""
     }
     let xhr = new XMLHttpRequest();
-    xhr.open("POST","192.168.10.4"
-        
-    )
+    let url = "/script/sqlcatch.php"
+    xhr.open("POST",url, true)
+    xhr.setRequestHeader("Content-Type","application/json");
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readystate === 4 && xhr.status === 200){
+            document.getElementById("tester").innerText=this.responseText;
+        }
+        xhr.send(data);
+    }
 };
