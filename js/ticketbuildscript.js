@@ -14,7 +14,7 @@ function submitdata(){
         name:""
     }
     let xhr = new XMLHttpRequest();
-    let url = "/script/sqlcatch.php"
+    let url = "../script/sqlcatch.php"
     xhr.open("POST",url, true)
     xhr.setRequestHeader("Content-Type","application/json");
 
