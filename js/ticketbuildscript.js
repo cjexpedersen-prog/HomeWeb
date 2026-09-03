@@ -1,4 +1,4 @@
-const form = document.querySelector("form")
+const form = document.forms[0];
 let data={
         scale:"",
         urgency:"",
@@ -13,19 +13,17 @@ let data={
         name:""
     }
 function submitdata(){
-    const formData = new FormData(form)
+    const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
     data.submit =Date().toTimeString()
-    data.scale= formData.get("uR")
-    data.urgency= formData.get("sR")
-    data.prior= formData.get("existR")
+    data.scale= form.elements["uR"].value;
+    data.urgency= form.elements["sR"].value;
+    data.prior= form.elements["existR"].value;
     let xhr = new XMLHttpRequest();
     let url = "../script/sqlcatch.php"
     
     xhr.open("POST",url, true)
-
-
     xhr.setRequestHeader("Content-Type","application/json");
     xhr.onreadystatechange = function(){
         if(xhr.readystate === 4 && xhr.status === 200){
