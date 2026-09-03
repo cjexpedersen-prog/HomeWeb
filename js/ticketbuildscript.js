@@ -16,7 +16,7 @@ function submitdata(){
     const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
-    data.submit =toTimeString(Date())
+    data.submit = Date.toString();
     data.scale= form.elements["uR"].value;
     data.urgency= form.elements["sR"].value;
     data.prior= form.elements["existR"].value;
