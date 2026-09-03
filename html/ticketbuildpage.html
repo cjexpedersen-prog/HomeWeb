@@ -4,7 +4,7 @@
  <title>Submit a ticket</title>
 <meta charset="UTF-8">
 <link href="../css/ticketmainstyle.css" rel="stylesheet">
- <script src="../js/ticketbuildscript.js"></script>
+<script src="../js/ticketbuildscript.js"></script>
  <!--<link href="Styles.css" rel="stylesheet"> -->
 <!--Carter Pedersen,Started 08/28/2026, Laste Edited:9/2/2026 100% Hand coded. No AI Used.-->
 
@@ -23,7 +23,7 @@
                         <tr>
                              
                             <td>
-                                <input type="radio" name="sR" id="uRvsm" value="1">
+                                <input type="radio" name="sR" id="sRvsm" value="1" checked="true">
                                 <label for="sRsm" id="sRvsmL">Very Small</label>
                             </td>
                             <td>
@@ -55,7 +55,7 @@
                                     <label for="existRyes" id="existRyesL">Yes</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="existR" id="existRno" value="0">
+                                    <input type="radio" name="existR" id="existRno" value="0" checked="true">
                                     <label for="existRno" id="existRnoL">No</label>
                                 </td>
                             </tr>
@@ -70,7 +70,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" name="uR" id="uRlow" value="1">
+                                    <input type="radio" name="uR" id="uRlow" value="1" checked="true">
                                     <label for="uRlow" id="uRlowL">Low</label>
                                     <input type="radio" name="uR" id="uRmed" value="2">
                                     <label for="uRmed" id="uRmedL">Medium</label>
@@ -121,8 +121,9 @@
             <span id="lresults" class="lresults">
             </span>
     </div>
+    <p id="tester"></p>
     <div>
-        <button onclick="submitdata">Submit Ticket</button>
+        <button onclick="submitdata()">Submit Ticket</button>
     </div>
 </body>
 </main>
