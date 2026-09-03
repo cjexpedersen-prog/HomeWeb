@@ -13,7 +13,7 @@ let data={
         name:""
     }
 function submitdata(){
-    const formData = new formData(form)
+    const formData = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
     data.submit =Date().toTimeString()
