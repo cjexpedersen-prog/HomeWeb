@@ -37,7 +37,7 @@ function submitdata(){
     }
 
     if (document.getElementById("existRyes").checked){
-        prior="1"
+        scale=2
     }
 
     const formdata = new FormData(form)
@@ -48,14 +48,13 @@ function submitdata(){
     data.urgency= urgency
     data.prior= 0;
     let xhr = new XMLHttpRequest();
-    let url = "../script/sqlcatch.php"
+    let url = "../test.txt"
     xhr.open("POST",url, true)
     xhr.setRequestHeader("Content-Type","application/json");
     xhr.onreadystatechange = function(){
-        if(xhr.readystate === 4 && xhr.status === 200){
+        if(xhr.readystate == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
         }
         xhr.send(data);
-        console.log(xhr.response)
     }
 };
