@@ -1,8 +1,7 @@
 const form = document.querySelector("form")
-    form.addEventListener("submit",(event)=>{
+form.addEventListener("submit",(event)=>{
         event.preventDefault();
-        submitdata();
-    })
+        submitdata();})
 let data={
         scale:"",
         urgency:"",
@@ -26,7 +25,7 @@ function submitdata(){
     data.prior= formData.get("existR")
     let xhr = new XMLHttpRequest();
     let url = "../script/sqlcatch.php"
-
+    
     xhr.open("POST",url, true)
     xhr.setRequestHeader("Content-Type","application/json");
     xhr.onreadystatechange = function(){
