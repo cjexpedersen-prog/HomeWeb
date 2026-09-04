@@ -58,5 +58,6 @@ function submitdata(){
         xhr.open("GET",url, true)
         //xhr.setRequestHeader("Content-Type","application/json");
         xhr.send(data);
+        console.log(xhr.response);
     }
 };
