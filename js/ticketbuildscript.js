@@ -1,5 +1,7 @@
 const form = document.forms[0];
+let response;
 let rdata;
+let sdata
 let data={
         scale:"",
         urgency:"",
@@ -38,7 +40,7 @@ function submitdata(){
     }
 
     if (document.getElementById("existRyes").checked){
-        scale=2
+        prior="1"
     }
 
     const formdata = new FormData(form)
@@ -63,21 +65,20 @@ function submitdata(){
     }
 };
 async function trynew(){
-        try{
-                let response = await fetch("../test.txt");
-                rdata = await response;
-                let sdata = await response.responseText;
-                
-                if (!rdata.ok){
-                        console.error("Test failed : ",error);
-                }
-                else{
-                        console.log(rdata);
-                        console.log(sdata);
-                        document.getElementById("tester").textContent=sdata
-                }
-        }
-        catch (error){
+    try{
+            response = await fetch("../test.txt");
+            rdata = await response;
+            sdata = await response.responseText;
+            if (!rdata.ok){
                 console.error("Test failed : ",error);
-        }
+            }
+            else{
+                console.log(rdata);
+                console.log(sdata);
+                document.getElementById("tester").textContent=sdata
+            }
+    }
+    catch (error){
+        console.error("Test failed : ",error);
+    }
 }
