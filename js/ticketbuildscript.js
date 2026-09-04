@@ -67,9 +67,15 @@ async function trynew(){
                 let response = await fetch("../test.txt");
                 rdata = await response;
                 let sdata = await response.responseText;
-                console.log(rdata);
-                console.log(sdata);
-                document.getElementById("tester").innerText=sdata
+                
+                if (!rdata.ok){
+                        console.error("Test failed : ",error);
+                }
+                else{
+                        console.log(rdata);
+                        console.log(sdata);
+                        document.getElementById("tester").innerText=sdata
+                }
         }
         catch (error){
                 console.error("Test failed : ",error);
