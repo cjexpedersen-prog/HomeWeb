@@ -74,7 +74,7 @@ async function trynew(){
                 else{
                         console.log(rdata);
                         console.log(sdata);
-                        document.getElementById("tester").innerText=sdata
+                        document.getElementById("tester").innerHTML=sdata
                 }
         }
         catch (error){
