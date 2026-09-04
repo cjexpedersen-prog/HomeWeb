@@ -61,3 +61,13 @@ function submitdata(){
         console.log(xhr.response);
     }
 };
+async function trynew(){
+        try{
+                let response = await fetch("../text.txt");
+                let rdata = await response.json();
+                console.log(rdata);
+        }
+        catch (error){
+                console.error("Test failed : ",error);
+        }
+}
