@@ -1,4 +1,5 @@
 const form = document.forms[0];
+let rdata;
 let data={
         scale:"",
         urgency:"",
@@ -64,7 +65,7 @@ function submitdata(){
 async function trynew(){
         try{
                 let response = await fetch("../test.txt");
-                let rdata = await response;
+                rdata = await response;
                 console.log(rdata);
         }
         catch (error){
