@@ -49,12 +49,13 @@ function submitdata(){
     data.prior= 0;
     let xhr = new XMLHttpRequest();
     let url = "../test.txt"
-    xhr.open("GET",url, true)
+    
     xhr.setRequestHeader("Content-Type","application/json");
-    xhr.onreadystatechange = function(){
+    xhr.onload = function(){
         if(xhr.readystate == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
         }
+        xhr.open("GET",url, true)
         xhr.send(data);
     }
 };
