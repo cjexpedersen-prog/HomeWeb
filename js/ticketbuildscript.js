@@ -70,7 +70,6 @@ async function trynew(){
                 console.log(rdata);
                 console.log(sdata);
                 document.getElementById("tester").innerText=sdata
-                document.getElementById("tester").innerText=rdata
         }
         catch (error){
                 console.error("Test failed : ",error);
