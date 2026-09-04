@@ -65,7 +65,7 @@ function submitdata(){
 async function trynew(){
         try{
                 let response = await fetch("../test.txt");
-                rdata = await response;
+                rdata = await response.responseText;
                 console.log(rdata);
         }
         catch (error){
