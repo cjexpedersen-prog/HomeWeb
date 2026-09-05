@@ -59,8 +59,8 @@ function submitdata(){
             document.getElementById("tester").innerText=this.responseText;
         }
         xhr.open("GET",url, true)
-        //xhr.setRequestHeader("Content-Type","application/json");
-        xhr.send(data);
+        xhr.setRequestHeader("Content-Type","application/json");
+        xhr.send(data.toString);
         console.log(xhr.response);
     }
 };
