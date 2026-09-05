@@ -55,7 +55,7 @@ function submitdata(){
     getdata();
     let xhr = new XMLHttpRequest();
     let url = "../script/sqlcatch.php"
-    xmlhttp.onreadystatechange = function() {
+    xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
             console.log(this)
