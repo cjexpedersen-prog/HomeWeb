@@ -15,7 +15,7 @@ let data={
         loc:"",
         name:""
     }
-function submitdata(){
+function getdata(){
     let urgency =1;
     let scale =1;
     let prior ="0"
@@ -50,15 +50,16 @@ function submitdata(){
     data.scale= 0;
     data.urgency= urgency
     data.prior= 0;
+}
+function submitdata(){
+    getdata();
     let xhr = new XMLHttpRequest();
-    let url = "../test.txt"
-    
-    
+    let url = "../script/sqlcatch.php"
     xhr.onload = function(){
         if(xhr.readystate == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
         }
-        xhr.open("GET",url, true)
+        xhr.open("POST",url, true)
         xhr.setRequestHeader("Content-Type","application/json");
         xhr.send(data.toString);
         console.log(xhr.response);
