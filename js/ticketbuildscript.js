@@ -50,12 +50,13 @@ function getdata(){
     data.scale= 0;
     data.urgency= urgency
     data.prior= 0;
+    console.log("data got")
 }
 function submitdata(){
     let url = "../script/sqlcatch.php"
     getdata();
     let xhr = new XMLHttpRequest();
-    
+    console.log(xhr.readyState)
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
@@ -68,11 +69,13 @@ function submitdata(){
             console.log("c")
         }
         xhr.open("GET",url, true)
+        console.log(xhr.readyState)
         xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+        console.log(xhr.readyState)
         xhr.send(data.toString);
-        JSON.stringify()
+        console.log(xhr.readyState)
         console.log(xhr.response);
-
+        console.log("B")
     };
 };
 async function trynew(){
