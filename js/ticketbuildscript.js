@@ -69,7 +69,7 @@ function submitdata(){
             console.log("c")
         }
     };
-    xhr.open("GET",url, true)
+    xhr.open("POST",url, true)
         console.log(xhr.readyState)
         xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
         console.log(xhr.readyState)
