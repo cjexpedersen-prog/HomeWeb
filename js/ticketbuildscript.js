@@ -55,15 +55,20 @@ function submitdata(){
     getdata();
     let xhr = new XMLHttpRequest();
     let url = "../script/sqlcatch.php"
-    xhr.onload = function(){
-        if(xhr.readystate == 4 && xhr.status == 200){
+    xmlhttp.onreadystatechange = function() {
+      if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
+            console.log(this)
+        }
+        else{
+            console.log(xhr.readyState)
         }
         xhr.open("POST",url, true)
         xhr.setRequestHeader("Content-Type","application/json");
         xhr.send(data.toString);
         console.log(xhr.response);
-    }
+
+    };
 };
 async function trynew(){
     try{
