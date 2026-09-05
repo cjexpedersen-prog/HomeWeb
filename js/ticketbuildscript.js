@@ -52,20 +52,25 @@ function getdata(){
     data.prior= 0;
 }
 function submitdata(){
+    let url = "../script/sqlcatch.php"
     getdata();
     let xhr = new XMLHttpRequest();
-    let url = "../script/sqlcatch.php"
+    
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
-            console.log(this)
+            console.log(this.response)
+            alert(this.response)
+            console.log("b")
         }
         else{
             console.log(xhr.readyState)
+            console.log("c")
         }
-        xhr.open("POST",url, true)
-        xhr.setRequestHeader("Content-Type","application/json");
+        xhr.open("GET",url, true)
+        xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
         xhr.send(data.toString);
+        JSON.stringify()
         console.log(xhr.response);
 
     };
