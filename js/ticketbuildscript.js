@@ -65,11 +65,8 @@ function submitdata(){
         }
     };
     xhr.open("POST",url, true)
-        console.log(xhr.readyState)
         xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
-        console.log(xhr.readyState)
         xhr.send(data.toString);
-        console.log(xhr.readyState)
         console.log(xhr.response);
 };
 async function trynew(){
