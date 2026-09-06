@@ -47,7 +47,6 @@ data.submit = newday;
     const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
-    data.submit = Date.toString();
     data.scale= 0;
     data.urgency= urgency
     data.prior= 0;
