@@ -60,9 +60,6 @@ function submitdata(){
       if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
         }
-        else{
-            console.log(xhr.readyState)
-        }
     };
     xhr.open("POST",url, true)
         xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
