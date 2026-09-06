@@ -56,17 +56,12 @@ function submitdata(){
     let url = "../script/sqlcatch.php"
     getdata();
     let xhr = new XMLHttpRequest();
-    console.log(xhr.readyState)
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200){
             document.getElementById("tester").innerText=this.responseText;
-            console.log(this.response)
-            alert(this.response)
-            console.log("b")
         }
         else{
             console.log(xhr.readyState)
-            console.log("c")
         }
     };
     xhr.open("POST",url, true)
@@ -76,7 +71,6 @@ function submitdata(){
         xhr.send(data.toString);
         console.log(xhr.readyState)
         console.log(xhr.response);
-        console.log("B")
 };
 async function trynew(){
     try{
