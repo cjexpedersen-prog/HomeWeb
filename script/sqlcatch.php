@@ -1,5 +1,5 @@
 <?php
 $data = json_decode( file_get_contents( 'php://input' ), true );
-echo "Received ticket at $data->submot"
+echo "Received ticket at $data ->submit $data"
 
 ?>
