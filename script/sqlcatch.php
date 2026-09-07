@@ -1,10 +1,11 @@
 <?php
 $data = json_decode( file_get_contents( 'php://input' ), true );
-$user = file_get_contents('user.txt');
+try{
+  $user = file_get_contents('user.txt');
 $pass = file_get_contents('passwd.txt');
 $dbn = file_get_contents('dbn.txt');
 $sqll = mysqli_connect('localhost',$user,$pass,$dbn);
-if (mysqli_connect_errno()) {
+  if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " , $user, $pass, $dbn, $sqll, mysqli_connect_error();
   exit();
 }
@@ -15,4 +16,10 @@ $stmt->execute();
 echo "ticket recieved at ",$data['submit'];
   exit();
 }
+}
+catch(Exception $e){
+  echo 'Message: ' .$e->getMessage();
+}
+
+
 ?>
