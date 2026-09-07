@@ -6,8 +6,6 @@ let data={
         scale:"",
         urgency:"",
         prior:"",
-        resolv:"",
-        approv:0,
         hasimg:0,
         submit:"",
         inprg:0,
