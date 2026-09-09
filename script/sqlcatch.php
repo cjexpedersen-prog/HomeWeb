@@ -1,4 +1,5 @@
 <?php
+try{
 $data = json_decode( file_get_contents( 'php://input' ), true );
 try{
  include_once("sqlconnect.php");
@@ -11,6 +12,8 @@ try{
 catch(Exception $e){
   echo 'Message: ' .$e->getMessage();
 }
-
-
+}
+catch(Exception $e){
+  echo 'Message: ' .$e->getMessage();
+}
 ?>
