@@ -13,7 +13,7 @@ else{
 $stmt = $mysqli->prepare("INSERT INTO hhouse (scale,urgency,prior,hasimage,submittedwhen,description,location) VALUES(?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param($data['scale'], $data['urgency'], $data['prior'], $data['hasimg'], $data['submit'], $data['descr'], $data['loc']);
 $stmt->execute();
-echo "ticket recieved at ",$data['submit'];
+echo "ticket recieved at ", $data['submit'];
   exit();
 }
 }
