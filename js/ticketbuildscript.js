@@ -1,4 +1,8 @@
 const form = document.forms[0];
+let date = new Date();
+let vardt=date.toISOString().slice(0, 19).replace('T', ' '));
+data.submit= vardt;
+console.log(vardt);
 let response;
 let rdata;
 let sdata
@@ -16,10 +20,7 @@ let data={
    
 }
 function getdata(){
-        let date = new Date();
-        let vardt=date.toISOString().slice(0, 19).replace('T', ' '));
-        data.submit= vardt;
-        console.log(vardt);
+        
     let urgency =1;
     let scale =1;
     let prior ="0"
