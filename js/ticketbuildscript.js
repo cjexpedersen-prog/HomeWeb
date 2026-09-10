@@ -19,6 +19,7 @@ function getdata(){
         let date = new Date();
         let dt=date.toISOString().slice(0, 19).replace('T', ' '));
         data.submit= dt;
+        console.log(dt);
     let urgency =1;
     let scale =1;
     let prior ="0"
