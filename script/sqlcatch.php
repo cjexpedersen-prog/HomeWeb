@@ -1,5 +1,5 @@
 <?php
-error_log ='../eLogs/script_errors.txt'
+error_log ='./eLogs/log.txt'
 log_errors= On
 error_reporting = E_ALL
 try{
