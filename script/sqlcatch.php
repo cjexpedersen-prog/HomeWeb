@@ -17,7 +17,7 @@ include_once("sqlconnect.php");
  $img=$data['hasimg'];
  $when=$data['submit'];
  $descr=$data['descr'];
- $loc=$data['loc']);
+ $loc=$data['loc'];
  $stmt->execute();
  echo "ticket recieved at ", $data['submit'];
  exit();
