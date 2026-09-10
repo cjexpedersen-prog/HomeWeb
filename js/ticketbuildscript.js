@@ -17,7 +17,8 @@ let data={
 }
 function getdata(){
         let date = new Date();
-        data.submit= date.toISOString().slice(0, 19).replace('T', ' '));
+        let dt=date.toISOString().slice(0, 19).replace('T', ' '));
+        data.submit= dt;
     let urgency =1;
     let scale =1;
     let prior ="0"
