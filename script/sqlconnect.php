@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost; dbname=tickets;"
+$dsn = "mysql:host=localhost; dbname=tickets";
 
 $options = [
   PDO::ATTR_EMULATE_PREPARES   => false, // Disable emulation mode for "real" prepared statements
