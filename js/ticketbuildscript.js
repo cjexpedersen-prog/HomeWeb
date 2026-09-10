@@ -1,6 +1,6 @@
 const form = document.forms[0];
 let date = new Date();
-let vardt=date.toISOString().slice(0, 19).replace('T', ' '));
+let vardt=date.toISOString().slice(0, 19).replace('T', ' ');
 data.submit= vardt;
 console.log(vardt);
 let response;
