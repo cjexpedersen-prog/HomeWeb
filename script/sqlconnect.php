@@ -9,7 +9,7 @@ $options = [
 ];
 
 try {
-  $pdo = new PDO($dsn, file_get_contents('user.txt');, file_get_contents('passwd.txt');, $options);
+  $pdo = new PDO($dsn, file_get_contents('user.txt'), file_get_contents('passwd.txt'), $options);
 } 
 catch (Exception $e) {
   error_log($e->getMessage());
