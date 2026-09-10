@@ -1,7 +1,4 @@
 <?php
-error_log ='./eLogs/log.txt'
-log_errors= On
-error_reporting = E_ALL
 try{
 $data = json_decode( file_get_contents( 'php://input' ), true );
 try{
