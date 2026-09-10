@@ -4,6 +4,7 @@
  <title>House Helpdesk</title>
 <meta charset="UTF-8">
 <link href="../css/ticketmainstyle.css" rel="stylesheet">
+ <script src="../js/ticketsearchscript.js"></script>
 <!--Carter Pedersen,Started 08/20/2026, Laste Edited:8/28/2026 100% Hand coded. No AI Used.-->
 
 <!--This section creates and displays the main body of the page-->
@@ -15,11 +16,11 @@
         <div id="header">
             <h1>Browse Tickets</h1>
         </div>
-        
         <!--searchbox div -->
         <div id="qbox">
             <!--seachbox, used to get results -->
             <input type="text" id="query" placeholder="Search Tickets"></input>
+            <button id="search" onclick="gettickets()"></button>
         </div>
         <div class="filters">
             <h2>Filters</h2>
