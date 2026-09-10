@@ -17,8 +17,6 @@ let data={
         loc:"",
         name:""
     }
-   
-}
 function getdata(){
         
     let urgency =1;
