@@ -1,5 +1,4 @@
 <?php
-
 $dsn = "mysql:host=localhost; dbname=tickets";
 
 $options = [
@@ -9,10 +8,6 @@ $options = [
 ];
 try {
   $pdo = new PDO($dsn, str_replace(array("\r", "\n"), '',file_get_contents('user.txt')), str_replace(array("\r", "\n"), '',file_get_contents('passwd.txt')), $options);
-} 
-catch (Exception $e) {
-  error_log($e->getMessage());
-  exit('Something bad happened'); 
-}
-
+ $data = json_decode( file_get_contents( 'php://input' ), true );
+ 
 ?>
