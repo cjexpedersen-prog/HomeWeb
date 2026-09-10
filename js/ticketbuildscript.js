@@ -5,7 +5,7 @@ data.submit= vardt;
 console.log(vardt);
 let response;
 let rdata;
-let sdata
+let sdata;
 let data={
         scale:"",
         urgency:"",
@@ -16,7 +16,7 @@ let data={
         descr:"",
         loc:"",
         name:""
-    }
+    };
 function getdata(){
         
     let urgency =1;
@@ -78,7 +78,7 @@ async function trynew(){
             else{
                 console.log(rdata);
                 console.log(sdata);
-                document.getElementById("tester").textContent=sdata
+                document.getElementById("tester").textContent=sdata;
             }
     }
     catch (error){
