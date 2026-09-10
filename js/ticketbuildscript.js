@@ -13,6 +13,12 @@ let data={
         loc:"",
         name:""
     }
+function GFG_Fun() {
+    let date = new Date();
+    console.log("MySQL datetime - " +
+        date.toISOString().slice(0, 19).replace('T', ' '));
+        data.submit=date;
+}
 function getdata(){
     let urgency =1;
     let scale =1;
@@ -40,8 +46,6 @@ function getdata(){
     if (document.getElementById("existRyes").checked){
         prior="1"
     }
-        let newday =Date();
-data.submit = newday;
     const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
     data.loc =document.getElementById("ibLocat").innerText
