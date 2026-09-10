@@ -7,9 +7,8 @@ $options = [
   PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // Disable errors in the form of exceptions
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Make the default fetch be an associative array
 ];
-
 try {
-  $pdo = new PDO($dsn, file_get_contents('user.txt'), file_get_contents('passwd.txt'), $options);
+  $pdo = new PDO($dsn, str_replace(array("\r", "\n"), '',file_get_contents('user.txt')), str_replace(array("\r", "\n"), '',file_get_contents('passwd.txt')), $options);
 } 
 catch (Exception $e) {
   error_log($e->getMessage());
