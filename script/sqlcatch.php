@@ -22,7 +22,7 @@ try {
  $stmt->bindParam(':Scale', $Scale);
  $stmt->bindParam(':Location', $Location);
  $stmt->execute();
- echo "ticket recieved without issue."];
+ echo ["ticket recieved without issue."];
  exit();
 } 
 catch (Exception $e) {
