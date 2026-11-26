@@ -6,7 +6,7 @@ $options = [
   PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, // Disable errors in the form of exceptions
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Make the default fetch be an associative array
 ];
-try {
+// try {
   $pdo = new PDO($dsn, str_replace(array("\r", "\n"), '',file_get_contents('user.txt')), str_replace(array("\r", "\n"), '',file_get_contents('passwd.txt')), $options);
  $data = json_decode( file_get_contents( 'php://input' ), true );
  $Descr=$data['Descr'];
@@ -14,7 +14,7 @@ try {
  $ImglinkS=$data['ImglinkS'];
  $Scale=$data['Scale'];
   $Location=$data['Location'];
- $stmt = $pdo->prepare("INSERT INTO hhouse ( Description, Notes, Submittor, ImagelinkS, Scale, Location) VALUES( :Description, :Submittor, :ImagelinkS, :Scale, :Location)");
+ $stmt = $pdo->prepare("INSERT INTO tickets ( Description, Notes, Submittor, ImagelinkS, Scale, Location) VALUES( :Description, :Submittor, :ImagelinkS, :Scale, :Location)");
  $stmt->bindParam(':Description', $Descr);
  $stmt->bindParam(':Notes', $Notes);
  $stmt->bindParam(':Submittor', $Submittor);
@@ -24,10 +24,10 @@ try {
  $stmt->execute();
  echo ["ticket recieved without issue."];
  exit();
-} 
-catch (Exception $e) {
-  error_log($e->getMessage());
-  exit('Something bad happened'); 
-}
+//} 
+//catch (Exception $e) {
+ // error_log($e->getMessage());
+//  exit('Something bad happened'); 
+//}
 
 ?>
