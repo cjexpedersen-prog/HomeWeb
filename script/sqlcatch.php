@@ -19,8 +19,7 @@ try {
   $ImglinkF=$data['ImglinkF'];
  $Scale=$data['Scale'];
   $Location=$data['Location'];
- $stmt = $pdo->prepare("INSERT INTO hhouse (TicketID, Description, Notes, Submittor, Status, Approvalstatus, ImagelinkS, ImagelinkS, Scale, Location) VALUES(:TicketID, :Description, :Notes, :Submittor, :Status, :Approvalstatus, :ImagelinkS, :ImagelinkF, :Scale, :Location)");
- $stmt->bindParam(':ID', $ID);
+ $stmt = $pdo->prepare("INSERT INTO hhouse ( Description, Notes, Submittor, Status, Approvalstatus, ImagelinkS, ImagelinkS, Scale, Location) VALUES( :Description, :Notes, :Submittor, :Status, :Approvalstatus, :ImagelinkS, :ImagelinkF, :Scale, :Location)");
  $stmt->bindParam(':Description', $Descr);
  $stmt->bindParam(':Notes', $Notes);
  $stmt->bindParam(':Submittor', $Submittor);
