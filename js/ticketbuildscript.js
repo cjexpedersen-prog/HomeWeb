@@ -9,10 +9,8 @@ let sdata;
 let data={
         scale:"",
         urgency:"",
-        prior:"",
-        hasimg:0,
+        hasimg:"",
         submit:"",
-        inprg:0,
         descr:"",
         loc:"",
         name:""
@@ -41,10 +39,6 @@ function getdata(){
     }
     else if (document.getElementById("sRvlarge").checked){
         scale=4
-    }
-
-    if (document.getElementById("existRyes").checked){
-        prior="1"
     }
     const formdata = new FormData(form)
     data.descr =document.getElementById("ibDescr").innerText
