@@ -9,23 +9,29 @@ $options = [
 try {
   $pdo = new PDO($dsn, str_replace(array("\r", "\n"), '',file_get_contents('user.txt')), str_replace(array("\r", "\n"), '',file_get_contents('passwd.txt')), $options);
  $data = json_decode( file_get_contents( 'php://input' ), true );
- $stmt = $pdo->prepare("INSERT INTO hhouse (scale, urgency, prior, hasimage, submittedwhen, description, location) VALUES(:scale, :urgency, :prior, :hasimage, :submittedwhen, :description, :location)");
- $stmt->bindParam(':scale', $sc);
- $stmt->bindParam(':urgency', $urg);
- $stmt->bindParam(':prior', $pri);
- $stmt->bindParam(':hasimage', $img);
- $stmt->bindParam(':submittedwhen', $when);
- $stmt->bindParam(':description', $descr);
- $stmt->bindParam(':location', $loc);
- $sc=$data['scale']; 
- $ur=$data['urgency'];
- $pri=$data['prior'];
- $img=$data['hasimg'];
- $when=$data['submit'];
- $descr=$data['descr'];
- $loc=$data['loc'];
+ $ID=$data['ID']; 
+ $Descr=$data['Descr'];
+ $Notes=$data['Notes'];
+ $Submittor=$data['Submittor'];
+ $Status=$data['Status'];
+ $Approvalstatus=$data['Approvalstatus'];
+ $ImglinkS=$data['ImglinkS'];
+  $ImglinkF=$data['ImglinkF'];
+ $Scale=$data['Scale'];
+  $Location=$data['Location'];
+ $stmt = $pdo->prepare("INSERT INTO hhouse (TicketID, Description, Notes, Submittor, Status, Approvalstatus, ImagelinkS, ImagelinkS, Scale, Location) VALUES(:TicketID, :Description, :Notes, :Submittor, :Status, :Approvalstatus, :ImagelinkS, :ImagelinkF, :Scale, :Location)");
+ $stmt->bindParam(':ID', $ID);
+ $stmt->bindParam(':Description', $Descr);
+ $stmt->bindParam(':Notes', $Notes);
+ $stmt->bindParam(':Submittor', $Submittor);
+ $stmt->bindParam(':Status', $Status);
+ $stmt->bindParam(':Approvalstatus', $Approvalstatus);
+ $stmt->bindParam(':ImagelinkS', $ImglinkS);
+  $stmt->bindParam(':ImagelinkF', $ImglinkF);
+ $stmt->bindParam(':Scale', $Scale);
+ $stmt->bindParam(':Location', $Location);
  $stmt->execute();
- echo "ticket recieved at ", $data['submit'];
+ echo "ticket recieved without issue."];
  exit();
 } 
 catch (Exception $e) {
