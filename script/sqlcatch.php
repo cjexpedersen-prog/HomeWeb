@@ -14,7 +14,7 @@ $options = [
  $ImglinkS=$data['ImglinkS'];
  $Scale=$data['Scale'];
   $Location=$data['Location'];
- $stmt = $pdo->prepare("INSERT INTO tickets ( Description, Notes, Submittor, ImagelinkS, Scale, Location) VALUES( :Description, :Submittor, :ImagelinkS, :Scale, :Location)");
+ $stmt = $pdo->prepare("INSERT INTO tickets ( Description, Notes, Submittor, ImagelinkS, Scale, Location) VALUES( :Description, :Notes, :Submittor, :ImagelinkS, :Scale, :Location)");
  $stmt->bindParam(':Description', $Descr);
  $stmt->bindParam(':Notes', $Notes);
  $stmt->bindParam(':Submittor', $Submittor);
