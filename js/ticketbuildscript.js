@@ -7,28 +7,26 @@ let response;
 let rdata;
 let sdata;
 let data={
-        scale:"",
-        urgency:"",
-        hasimg:"",
-        submit:"",
-        descr:"",
-        loc:"",
-        name:""
+        Scale:"",
+        Urgency:"",
+        ImagelinkS:"",
+        Descr:"",
+        Location:"",
+        Submittor:""
     };
 data.submit= vardt;
 function getdata(){
         
-    let urgency =1;
+    let urgency ="Low";
     let scale =1;
-    let prior ="0"
     if (document.getElementById("uRmed").checked){
-        urgency=2
+        urgency="Medium"
     }
      else if (document.getElementById("uRhi").checked){
-        urgency=3
+        urgency="High"
     }
     else if (document.getElementById("uRcrit").checked){
-        urgency=4
+        urgency="Critical"
     }
 
     if (document.getElementById("sRmed").checked){
@@ -41,11 +39,10 @@ function getdata(){
         scale=4
     }
     const formdata = new FormData(form)
-    data.descr =document.getElementById("ibDescr").innerText
-    data.loc =document.getElementById("ibLocat").innerText
-    data.scale= 0;
-    data.urgency= urgency
-    data.prior= 0;
+    data.Descr =document.getElementById("ibDescr").innerText;
+    data.Location =document.getElementById("ibLocat").innerText;
+    data.Scale= scale;
+    data.Urgency= urgency
     console.log("data got")
 }
 function submitdata(){
