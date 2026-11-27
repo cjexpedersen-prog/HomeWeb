@@ -39,8 +39,8 @@ function getdata(){
         scale=4
     }
     const formdata = new FormData(form)
-    data.Descr =document.getElementById("ibDescr").innerText;
-    data.Location =document.getElementById("ibLocat").innerText;
+    data.Descr =document.getElementById("ibDescr").value;
+    data.Location =document.getElementById("ibLocat").value;
     data.Scale= scale;
     data.Urgency= urgency
     console.log("data got")
