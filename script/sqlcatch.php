@@ -10,15 +10,17 @@ $options = [
   $pdo = new PDO($dsn, str_replace(array("\r", "\n"), '',file_get_contents('user.txt')), str_replace(array("\r", "\n"), '',file_get_contents('passwd.txt')), $options);
  $data = json_decode( file_get_contents( 'php://input' ), true );
  $Descr=$data['Descr'];
+ $Urgency=$data['Urgency'];
  $Submittor=$data['Submittor'];
  $ImglinkS=$data['ImglinkS'];
  $Scale=$data['Scale'];
   $Location=$data['Location'];
- $stmt = $pdo->prepare("INSERT INTO tickets ( Description, Notes, Submittor, ImagelinkS, Scale, Location) VALUES( :Description, :Notes, :Submittor, :ImagelinkS, :Scale, :Location)");
+ $stmt = $pdo->prepare("INSERT INTO tickets ( Description, Urgency, Submittor, ImglinkS, Scale, Location) VALUES( :Description, :Urgency, :Submittor, :Im
+ glinkS, :Scale, :Location)");
  $stmt->bindParam(':Description', $Descr);
- $stmt->bindParam(':Notes', $Notes);
+ $stmt->bindParam(':Urgency', $Urgency);
  $stmt->bindParam(':Submittor', $Submittor);
- $stmt->bindParam(':ImagelinkS', $ImglinkS);
+ $stmt->bindParam(':ImglinkS', $ImglinkS);
  $stmt->bindParam(':Scale', $Scale);
  $stmt->bindParam(':Location', $Location);
  $stmt->execute();
